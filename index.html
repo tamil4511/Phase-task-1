@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User name" id="LoginUsername" name="name" autocomplete="username" required>
+                <span id="Login-Username-error" class="error"></span>
+                <input type="password" class="input-field" id="LoginPassword" placeholder="Enter password" name="password"
+                    autocomplete="current-password" required>
+                    <h6 id="Login-Password-error" class="error"></h6>
+                <span class="Login-Password-error"></span>
+                <input type="checkbox" class="check-box"><span class="login-span1">Remember Password</span>
+                <button type="submit" class="submit-btn" name="submit" id="loginSubmit">Log In</button>
+                <h5>I have no account? <span class="login-span2" onclick="register()">register</span></h5>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="First name" id="Firstname" required>
+                <span id="Firstname-error" class="error"></span>
+            
+                <input type="text" class="input-field" placeholder="Last name" id="Lastname" required>
+                <span id="Lastname-error" class="error"></span>
+            
+                <input type="date" class="input-field" id="Date" required>
+                <span id="Date-error" class="error"></span>
+            
+                <input type="text" class="input-field" placeholder="Age" id="Age" required>
+                <span id="Age-error" class="error"></span>
+            
+                <div class="col">
+                    <label>
+                        <input type="radio" name="gender" value="male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" required>
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other" required>
+                        Other
+                    </label>
+                </div>
+            
+                <input type="number" class="input-field" placeholder="Phone" id="Phone" autocomplete="tel" required>
+                <span id="Phone-error" class="error"></span>
+            
+                <input type="email" class="input-field" placeholder="E-mail" id="E-mail" autocomplete="email" required>
+                <span id="Email-error" class="error"></span>
+            
+                <textarea name="address" class="input-field" placeholder="Address" id="Address" autocomplete="street-address" required></textarea>
+                <span id="Address-error" class="error"></span>
+            
+                <select id="State" class="input-field" required>
+                    <option value="">Select state</option>
+                    <!-- State options will be populated dynamically -->
+                </select>
+                <span id="State-error" class="error"></span>
+            
+                <select id="City" class="input-field" required>
+                    <option value="">Select city</option>
+                    <!-- City options will be populated dynamically -->
+                </select>
+                <span id="City-error" class="error"></span>
+            
+                <input type="text" class="input-field" placeholder="User name" id="Username" autocomplete="username" required>
+                <span id="Username-error" class="error"></span>
+            
+                <input type="password" class="input-field" placeholder="Enter password" id="Enterpassword" autocomplete="new-password" required>
+                <span id="Enterpassword-error" class="error"></span>
+            
+                <input type="password" class="input-field" placeholder="Confirm password" id="Confirmpassword" autocomplete="new-password" required>
+                <span id="Confirmpassword-error" class="error"></span>
+            
+                <input type="checkbox" class="check-box" required>
+                <span class="register-span1">I agree to the terms & conditions</span>
+            
+                <button type="submit" class="submit-btn" id="register-btn">Register</button>
+                <h5>Already have an account? <span class="register-span2" onclick="login()">Login</span></h5>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="./style.js"></script>
+   
+</body>
+
+</html>
